@@ -57,7 +57,7 @@ batch_strata_ads <- function(fbacc,
     title = "Waiting for next ad upload."
   )
   ## check the number of strata
-  num_strata <- sum(names(unlist(strata_targeting)) == "strata_id")
+  num_strata <- length(strata_targeting)
   ## upload ads
   if (num_strata > 1) {
     ## upload ads one by one, with wait time between each upload to avoid
